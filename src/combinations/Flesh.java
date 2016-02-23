@@ -10,12 +10,12 @@ public class Flesh implements Combination{
 
     public Boolean chek(ArrayList<Card> deck) {
 
-        for (int i = 0; i < deck.size()-4; i++) {
-            if ((deck.get(i).getType().equals(deck.get(i+1).getType()) &&
-                    (deck.get(i+1).getType().equals(deck.get(i+2).getType())) &&
-                    (deck.get(i+2).getType().equals(deck.get(i+3).getType())) &&
-                    (deck.get(i+3).getType().equals(deck.get(i+4).getType())))){
+        for (int i = 0; i < deck.size()-1; i++) {
+            if ((deck.get(i).getType().equals(deck.get(i+1).getType()) )){
                 indekator = true;
+            }else {
+                indekator = false;
+                break;
             }
         }
 
